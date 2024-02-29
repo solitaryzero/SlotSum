@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=0 python ./src/model/bart_kv/evaluate.py \
+    --data_path ./data/slotsum/clipped \
+    --model_path ./models/bart_kv/bart-large \
+    --base_model ./models/pretrained/bart-large \
+    --data_format json \
+    --seq_max_length 512 \
+    --res_max_length 64 \
+    --cuda \
+    --learning_rate 1e-5 \
+    --epoch 4 \
+    --train_batch_size 8 \
+    --eval_batch_size 8 \
+    --print_interval 100 \
+    --seed 42

@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 python ./src/model/slotsum/fill_template.py \
+    --data_path ./data/slotsum/sloted \
+    --template_path ./data/slotsum/predictions/template_prediction_golden \
+    --filler_path ./models/slotsum/filler/bart-large \
+    --data_format json \
+    --data_split test \
+    --threshold 80 \
+    --missing_strategy predict \
+    --template golden \
+    --seq_max_length 512 \
+    --cuda \
+    --seed 42

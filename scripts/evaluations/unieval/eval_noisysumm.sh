@@ -1,0 +1,1 @@
+python ../UniEval/eval_slotsum.py --data_path ./data/slotsum/predictions/noisysumm/prediction.jsonl
